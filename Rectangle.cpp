@@ -58,7 +58,7 @@ void Rectangle::Draw(sf::RenderWindow& window) {
 
 	if (fill.r != -1) {
 		rect.setFillColor(sf::Color(fill.r, fill.g, fill.b));
-		if (fill.opacity > 0)
+		if (fill.opacity >= 0)
 			rect.setFillColor(sf::Color(fill.r, fill.g, fill.b, fill.opacity * MAX));
 	}
 	else rect.setFillColor(sf::Color::Transparent);
@@ -66,7 +66,7 @@ void Rectangle::Draw(sf::RenderWindow& window) {
 	if (stroke.getStrokeColor().r != -1) {
 		rect.setOutlineColor(sf::Color(stroke.getStrokeColor().r, stroke.getStrokeColor().g, stroke.getStrokeColor().b));
 		rect.setOutlineThickness(stroke.getStrokeWidth());
-		if (stroke.getStrokeColor().opacity > 0)
+		if (stroke.getStrokeColor().opacity >= 0)
 			rect.setOutlineColor(sf::Color(stroke.getStrokeColor().r, stroke.getStrokeColor().g, stroke.getStrokeColor().b, stroke.getStrokeColor().opacity * MAX));
 	}
 	else rect.setOutlineColor(sf::Color::Transparent);
