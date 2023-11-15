@@ -60,15 +60,15 @@ void Text::Draw(sf::RenderWindow& window) {
 	sf::Text text;
 	sf::Font font;
 
-	if (!font.loadFromFile("times new roman.ttf")) 
+	if (!font.loadFromFile("times new roman.ttf"))
 		return;
-	
+
 	text.setFont(font);
 	text.setString(content);
 	text.setCharacterSize(fontSize);
 
-	if (colorProp.getFill().r != -1) 
-		text.setFillColor(sf::Color(colorProp.getFill().r, colorProp.getFill().g, colorProp.getFill().b));
+	if (fill.r != -1) 
+		text.setFillColor(sf::Color(fill.r, fill.g, fill.b));
 	else text.setFillColor(sf::Color::Transparent);
 
 	text.setPosition(textPos.getX(), textPos.getY() - fontSize);
