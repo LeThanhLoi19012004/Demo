@@ -1,13 +1,13 @@
 #include "Lib.h"
 
 Figure* FactoryFigure::getFigure(string name) {
-	figureId["rect"]		= 1;
+	figureId["rect"]		  = 1;
 	figureId["circle"]		= 2;
 	figureId["ellipse"]		= 3;
-	figureId["line"]		= 4;
+	figureId["line"]		  = 4;
 	figureId["polyline"]	= 5;
 	figureId["polygon"]		= 6;
-	figureId["text"]		= 7;
+	figureId["text"]		  = 7;
 
 	int num = figureId[name];
 	switch (num) {
@@ -33,16 +33,13 @@ Figure* FactoryFigure::getFigure(string name) {
 	}
 	case 6: {
 		return new Polygon();
-
 		break;
 	}
 	case 7: {
 		return new Text();
-
 		break;
 	}
 	default: return NULL;
 	}
-
 	return NULL;
 }

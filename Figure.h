@@ -3,34 +3,34 @@
 
 class Figure {
 protected:
-
+	// Figure name, textname
 	string figure;
-	string text_name; 
-	ColorProperty colorProp;
-	//ColorProperty colorProp; //Update all of color property
+	string text_name;
 
-	string line;  /*contain data of a figure*/
+	// Stroke and fillings
+	Stroke stroke;
+	Color fill;
+
+	string line;  //contain data of a figure
 	unordered_map<string, Color> map_color;
 
-	//Functions to process parameter
+	// Functions to process parameter
 	void loadColorMap();
-	Color processColor(string);
+	Color processColor(string, string);
+	
 public:
-
 	Figure();
-	/*Update element of figure*/
-	void update(string, string ,string);
+	
+	//Update element of figure
+	void update(string, string, string);
 	void updateSameElement(string, string, string);
 	virtual void updateDiffElement();
 
-
-	/*Setter and Getter method*/
 	string getName();
-
 	void setName(string);
+
 	virtual ~Figure();
-	//Fuctions
-	virtual void Draw(sf::RenderWindow&);	
+	virtual void Draw(sf::RenderWindow&);
 };
 
 #endif
