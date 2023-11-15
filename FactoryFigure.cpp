@@ -1,19 +1,45 @@
 #include "Lib.h"
 
 Figure* FactoryFigure::getFigure(string name) {
-	if(name == "rect")
+	figureId["rect"]		  = 1;
+	figureId["circle"]		= 2;
+	figureId["ellipse"]		= 3;
+	figureId["line"]		  = 4;
+	figureId["polyline"]	= 5;
+	figureId["polygon"]		= 6;
+	figureId["text"]		  = 7;
+
+	int num = figureId[name];
+	switch (num) {
+	case 1: {
 		return new Rectangle();
-	if(name == "circle")
+		break;
+	}
+	case 2: {
 		return new Circle();
-	if(name == "ellipse")
+		break;
+	}
+	case 3: {
 		return new Ellipse();
-	if(name == "line")
+		break;
+	}
+	case 4: {
 		return new Line();
-	if(name == "polyline")
+		break;
+	}
+	case 5: {
 		return new Polyline();
-	if(name == "polygon")
+		break;
+	}
+	case 6: {
 		return new Polygon();
-	if(name == "text")
+		break;
+	}
+	case 7: {
 		return new Text();
+		break;
+	}
+	default: return NULL;
+	}
 	return NULL;
 }

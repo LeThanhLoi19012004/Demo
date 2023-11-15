@@ -16,6 +16,7 @@ private:
 public:
 	Stroke();
 	~Stroke();
+  
 	Color getStrokeColor();
 	float getStrokeWidth();
 
