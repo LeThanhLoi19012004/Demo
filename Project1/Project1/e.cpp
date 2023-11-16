@@ -2,4 +2,5 @@
 
 void output() {
 	cout << "Hello world !!!" << endl;
+	cout << "Bye bye !!!" << endl;
 }
