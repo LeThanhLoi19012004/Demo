@@ -15,7 +15,7 @@ void Figure::loadColorMap() {
 		cout << "Error Loading Color File\n";
 		return;
 	}
-	
+
 	string color_line = "";
 	while (getline(color_file, color_line)) {
 		int pos = color_line.find("#");
@@ -36,8 +36,8 @@ void Figure::loadColorMap() {
 		Color color;
 		color.r = stoi(hexa_code.substr(1, 2), NULL, 16);
 		color.g = stoi(hexa_code.substr(3, 2), NULL, 16);
-		color.b = stoi(hexa_code.substr(5, 2), NULL, 16);
-		
+		color.b = stoi(hexa_code.substr(5, 2), NULL, 16);	
+    
 		map_color[color_name] = color;
 	}
 	map_color["none"] = { -1, -1, -1, -1 };
@@ -52,8 +52,8 @@ void Figure::updateSameElement(string figure, string attribute, string text_name
 	this->line = attribute;
 	this->figure = figure;
 	this->text_name = text_name;
+  
 	stringstream ss(line);
-	
 	string property, value;
 	string fillcolor = "", fillopa = "-1";
 	string strokecolor = "", strokeopa = "-1";

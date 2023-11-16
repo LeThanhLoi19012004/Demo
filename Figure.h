@@ -16,7 +16,6 @@ protected:
 
 	// Functions to process parameter
 	void loadColorMap();
-	
 	Color processColor(string, string);
 	
 public:
