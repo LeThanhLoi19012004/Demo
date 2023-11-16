@@ -1,7 +1,7 @@
 #include "Header1.h"
 
 int main() {
-	cout << "Hello world !!!" << endl;
+	output();
 	int a = 3;
 	cout << a;
 	return 0;
