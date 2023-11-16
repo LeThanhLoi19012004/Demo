@@ -1,5 +1,4 @@
-#include <iostream>
-using namespace std;
+#include "Header1.h"
 
 int main() {
 	cout << "Hello world !!!" << endl;
